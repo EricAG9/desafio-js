@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>ToDo List</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Sua Lista de tarefas</h1>
+    <button type="button" onclick="listTask()">Listar todas as tarefas</button>
+      <div id="taskModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="listTask()">&times;</span>
+          <div id="allTasksContainer"></div>
+        </div>
+      </div>
+      <div>
+        <label for="idTarefa">ID da Tarefa:</label>
+        <input type="text" id="idTask"  placeholder = "Pesquise pelo id de sua tarefa ..." required>
+        <button onclick="showTaskId()">Mostrar Tarefa por ID</button>
+      </div>      
+
+    <form id="taskForm">
+      <label for="title" >Título:</label>
+      <input type="text" id="title" placeholder = "Digite aqui seu titulo ..." required>
+
+      <label for="description">Descrição:</label>
+      <input id="description" placeholder = "Digite aqui sua descrição ..."></inp>
+
+      <button type="button" onclick="addTask()">Criar Tarefa</button>
+    </form>
+
+    <ul id="taskList"></ul>
+  </div>
+    
+  <script src="index.js"></script>
+</body>
+</html>
